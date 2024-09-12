@@ -26,7 +26,7 @@ yarn add vite-plugin-html-sri -D
 ```sh
 # vite.config.js
 import { defineConfig } from 'vite';
-import sri from 'vite-plugin-transform-sri';
+import sri from 'vite-plugin-html-sri';
 
 export default defineConfig({
   plugins: [
