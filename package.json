@@ -1,0 +1,61 @@
+{
+  "name": "vite-plugin-html-sri",
+  "author": "ducphu0ng",
+  "version": "1.0.0",
+  "description": "A Vite plugin that enables Subresource Integrity (SRI) by adding integrity attributes to JavaScript and CSS assets",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "import": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/esm/index.js"
+    },
+    "require": {
+      "types": "./dist/index.d.cts",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc && tsup src/index.ts --format cjs,esm --legacy-output --dts --clean",
+    "test": "vitest",
+    "watch": "tsc --watch",
+    "prepublishOnly": "pnpm build",
+    "lint:format": "prettier --write ./src ./__tests__",
+    "lint:ts": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ducphu0ng/vite-plugin-html-sri.git"
+  },
+  "keywords": [
+    "subresource",
+    "integrity",
+    "sri",
+    "vite",
+    "vite-plugin",
+    "plugin"
+  ],
+  "packageManager": "pnpm@9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1",
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/node": "^22.5.4",
+    "prettier": "3.3.3",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.3",
+    "vitest": "^2.0.5"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "node-html-parser": "^6.1.13"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist/",
+    "src/"
+  ]
+}
