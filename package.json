@@ -1,7 +1,7 @@
 {
   "name": "vite-plugin-html-sri",
   "author": "ducphu0ng",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Vite plugin that enables Subresource Integrity (SRI) by adding integrity attributes to JavaScript and CSS assets",
   "license": "MIT",
   "type": "module",
