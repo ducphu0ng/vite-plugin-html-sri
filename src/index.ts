@@ -50,7 +50,7 @@ export default function sri(options: SriOptions = {}): Plugin {
         [...scripts, ...styles].map(async (node) => {
           let source: BinaryLike = '';
           const attribute = ((node.attrs?.src && 'src') || (node.attrs?.href && 'href'))!;
-          const resourceUrl = node.getAttribute(attribute)!;
+          const resourceUrl = node.getAttribute(attribute)!.replace(BASE_URL, '');
 
           // load external resource
           if (external && resourceUrl.startsWith('http')) {
@@ -65,8 +65,7 @@ export default function sri(options: SriOptions = {}): Plugin {
 
           // load local resource
           if (!resourceUrl.startsWith('http')) {
-            const resourceWithoutBaseUrl = resourceUrl.slice(BASE_URL.length);
-            const bundleItem = bundle![resourceWithoutBaseUrl];
+            const bundleItem = bundle![resourceUrl];
 
             if ('code' in bundleItem) {
               source = bundleItem.code;
