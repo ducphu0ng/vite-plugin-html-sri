@@ -1,7 +1,7 @@
 {
   "name": "vite-plugin-html-sri",
   "author": "ducphu0ng",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Vite plugin that enables Subresource Integrity (SRI) by adding integrity attributes to JavaScript and CSS assets",
   "license": "MIT",
   "type": "module",
@@ -40,17 +40,17 @@
   ],
   "packageManager": "pnpm@9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1",
   "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
-    "@types/node": "^22.5.4",
-    "prettier": "3.3.3",
-    "tsup": "^8.2.4",
-    "typescript": "^5.5.4",
-    "vite": "^5.4.3",
-    "vitest": "^2.0.5"
+    "@trivago/prettier-plugin-sort-imports": "^6.0.0",
+    "@types/node": "^25.0.0",
+    "prettier": "3.7.4",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.7",
+    "vitest": "^4.0.15"
   },
   "dependencies": {
     "node-fetch": "^3.3.2",
-    "node-html-parser": "^6.1.13"
+    "node-html-parser": "^7.0.1"
   },
   "files": [
     "LICENSE",
